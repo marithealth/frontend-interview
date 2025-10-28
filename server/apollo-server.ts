@@ -3,7 +3,6 @@ import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
 import express from "express";
 import http from "http";
 import { jobResolvers } from "./resolvers/jobResolvers";
-import { salaryResolvers } from "./resolvers/salaryResolvers";
 
 const typeDefs = `
   type Job {
@@ -16,25 +15,14 @@ const typeDefs = `
     description: String!
   }
 
-  type SalaryEstimate {
-    specialty: String!
-    minSalary: Int!
-    maxSalary: Int!
-    averageSalary: Int!
-    percentile25: Int!
-    percentile75: Int!
-  }
-
   type Query {
     jobs(specialty: String, location: String): [Job!]!
-    salaryEstimate(specialty: String!, experience: Int!, location: String!): SalaryEstimate!
   }
 `;
 
 const resolvers = {
   Query: {
     ...jobResolvers.Query,
-    ...salaryResolvers.Query,
   },
 };
 

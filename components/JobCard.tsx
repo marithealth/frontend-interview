@@ -1,3 +1,5 @@
+import { formatCurrency } from "../lib/utils/currency";
+
 interface Job {
   id: string;
   title: string;
@@ -13,14 +15,9 @@ interface JobCardProps {
 }
 
 export function JobCard({ job }: JobCardProps) {
-  // This function has a potential runtime error - salary might be undefined
   const formatSalary = (salary: number | undefined) => {
     if (!salary) return "Salary not available";
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 0,
-    }).format(salary);
+    return formatCurrency(salary);
   };
 
   return (
@@ -48,7 +45,6 @@ export function JobCard({ job }: JobCardProps) {
       </div>
 
       <p className="text-gray-700 mb-4 line-clamp-3">{job.description}</p>
-      {/* This button has a CSS class that doesn't exist in Tailwind */}
       <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm mr-2">
         Save Job
       </button>
