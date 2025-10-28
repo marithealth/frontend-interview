@@ -1,0 +1,39 @@
+{
+  "name": "doctor-job-finder",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run apollo-server\" \"npm run next-dev\"",
+    "next-dev": "next dev",
+    "apollo-server": "tsx server/apollo-server.ts",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "setup:broken": "node setup-interview.js broken",
+    "setup:working": "node setup-interview.js working",
+    "setup:rest": "node setup-interview.js rest"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.8",
+    "apollo-server-express": "^3.12.1",
+    "apollo-server-core": "^3.12.1",
+    "express": "^4.18.2",
+    "graphql": "^16.8.1",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "tsx": "^4.6.2",
+    "typescript": "^5"
+  }
+}
