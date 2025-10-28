@@ -8,32 +8,33 @@
     "apollo-server": "tsx server/apollo-server.ts",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "setup:broken": "node setup-interview.js broken",
     "setup:working": "node setup-interview.js working",
     "setup:rest": "node setup-interview.js rest"
   },
   "dependencies": {
-    "@apollo/client": "^3.8.8",
-    "apollo-server-express": "^3.12.1",
-    "apollo-server-core": "^3.12.1",
-    "express": "^4.18.2",
-    "graphql": "^16.8.1",
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "@apollo/client": "^3.14.1",
+    "apollo-server-core": "^3.13.0",
+    "apollo-server-express": "^3.13.0",
+    "express": "^4.22.2",
+    "graphql": "^16.14.1",
+    "next": "^16.2.7",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "concurrently": "^8.2.2",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "tsx": "^4.6.2",
-    "typescript": "^5"
+    "@types/express": "^4.17.23",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "^16.2.7",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   }
 }

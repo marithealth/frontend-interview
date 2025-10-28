@@ -204,6 +204,7 @@ This exercise is designed to evaluate a candidate's debugging skills, problem-so
 
 ## Exercises
 
+1. Display the jobs
 2. Fix the filters
    2a. Update the filter logic to actually filter
 3. Hook up the Salary Estimator

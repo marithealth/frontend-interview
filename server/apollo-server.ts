@@ -50,7 +50,8 @@ async function startApolloServer() {
   });
 
   await server.start();
-  server.applyMiddleware({ app, path: "/graphql" });
+  // Express 4 type defs differ from apollo-server-express; runtime behavior unchanged
+  server.applyMiddleware({ app: app as Parameters<typeof server.applyMiddleware>[0]["app"], path: "/graphql" });
 
   const PORT = process.env.APOLLO_PORT || 4000;
 
