@@ -1,12 +1,5 @@
 # Frontend Developer Technical Interview Exercise
 
-## Overview
-
-You'll be working on a **Doctor Job Finder** application — a tool that helps doctors browse and filter job listings. This exercise is designed to test your debugging skills, problem-solving approach, communication, and ability to work with modern development tools.
-
-**Duration:** ~60 minutes  
-**Focus:** Process over completion — we want to see how you think, communicate, and work through ambiguity
-
 ## The Application
 
 A Next.js app with React, Tailwind CSS, and Apollo GraphQL that allows doctors to:
